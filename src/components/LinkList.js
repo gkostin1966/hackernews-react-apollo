@@ -52,7 +52,6 @@ class LinkList extends Component {
       </Query>
     )
   }
-}
 
 _updateCacheAfterVote = (store, createVote, linkId) => {
   const data = store.readQuery({ query: FEED_QUERY })
@@ -61,6 +60,8 @@ _updateCacheAfterVote = (store, createVote, linkId) => {
   votedLink.votes = createVote.link.votes
 
   store.writeQuery({ query: FEED_QUERY, data })
+}
+
 }
 
 export default LinkList
